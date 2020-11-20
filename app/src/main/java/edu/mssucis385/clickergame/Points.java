@@ -34,7 +34,7 @@ public class Points {
     {
         return mTimeMultiplier;
     }
-    public static double geTimetMultiplier()
+    public static double geTimeMultiplier()
     {
         return mTimeMultiplier;
     }
