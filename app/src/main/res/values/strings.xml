@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Clicker Game</string>
+    <string name="cosmetic_title">Cosmetic</string>
+    <string name="upgrade_title">Upgrades</string>
+    <string name="points">"Points: "</string>
+    <string name="base_point">Base Points</string>
+    <string name="point_multiplier">Point Multiplier</string>
+    <string name="double_points_received">Double Points Chance</string>
+    <string name="upgrade_timer">Upgrade Timer</string>
+    <string name="more_efficient_timer">More Efficient Timer</string>
+
+    <string name="channel_name_completed">Timer completed</string>
+    <string name="channel_description_completed">Displays when the timer completes</string>
+    <string name="cost">"Cost: "</string>
+    <string name="setting">Settings</string>
+    <string name="menu">Menu</string>
+    <string name="add_points">Add Points</string>
+    <string name="additional_fingers">Addition Fingers</string>
 </resources>

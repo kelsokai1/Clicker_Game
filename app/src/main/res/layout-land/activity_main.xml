@@ -26,7 +26,7 @@
 
     <Button
         android:id="@+id/pointsButton"
-        android:layout_width="90dp"
+        android:layout_width="190dp"
         android:layout_height="40dp"
         android:layout_marginBottom="40dp"
         android:longClickable="true"
@@ -37,14 +37,15 @@
         app:layout_constraintRight_toRightOf="parent" />
     <Button
         android:id="@+id/mainMenuButton"
-        android:layout_width="90dp"
+        android:layout_width="175dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
         android:text="@string/menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
     <Button
         android:id="@+id/upgradeButton"
-        android:layout_width="90dp"
+        android:layout_width="175dp"
         android:layout_height="40dp"
         android:text="@string/upgrade_title"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +53,7 @@
         android:onClick="openUpgradeMenu"/>
     <Button
         android:id="@+id/cosmeticButton"
-        android:layout_width="90dp"
+        android:layout_width="175dp"
         android:layout_height="40dp"
         android:text="@string/cosmetic_title"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +62,7 @@
         android:visibility="invisible"/>
     <Button
         android:id="@+id/settingsButton"
-        android:layout_width="90dp"
+        android:layout_width="175dp"
         android:layout_height="40dp"
         android:text="@string/setting"
         app:layout_constraintBottom_toBottomOf="parent"
