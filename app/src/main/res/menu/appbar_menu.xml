@@ -6,4 +6,8 @@
         app:showAsAction="ifRoom"
         android:title="Points: ">
     </item>
+    <item android:id="@+id/informationButton"
+        app:showAsAction="ifRoom"
+        android:title="information"
+        android:icon="@drawable/information"/>
 </menu>

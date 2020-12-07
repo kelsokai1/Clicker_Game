@@ -1,6 +1,7 @@
 package edu.mssucis385.clickergame;
 
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -9,8 +10,10 @@ import android.preference.PreferenceManager;
 public class SettingsFragment extends PreferenceFragment
         implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-
     public static String PREFERENCE_THEME = "pref_theme";
+    public static String PREFERENCE_MUSIC = "music_pref";
+    private boolean isPlaying;
+    private SharedPreferences sharedPrefs;
 
     @Override
     public void onResume() {
@@ -29,6 +32,9 @@ public class SettingsFragment extends PreferenceFragment
             // Recreate the activity so the theme takes effect
             getActivity().recreate();
         }
+        else if (key.equals(PREFERENCE_MUSIC)){
+        }
+
 
     }
 
@@ -41,8 +47,8 @@ public class SettingsFragment extends PreferenceFragment
         addPreferencesFromResource(R.xml.preferences);
 
         // Access the default shared prefs
-        SharedPreferences sharedPrefs =
-                PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
 
     }
 

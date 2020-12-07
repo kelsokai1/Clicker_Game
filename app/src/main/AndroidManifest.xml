@@ -4,18 +4,25 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/point_picture"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/point_picture_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".PointIntentService"
+            android:name=".MusicIntentService"
             android:exported="false"></service>
+        <service
+            android:name=".PointIntentService"
+            android:exported="false" />
 
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".ComseticActivity" />
-        <activity android:name=".UpgradeActivity" />
+        <activity android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UpgradeActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

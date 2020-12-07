@@ -2,8 +2,13 @@ package edu.mssucis385.clickergame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.preference.PreferenceManager;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -17,6 +22,7 @@ public class SettingsActivity extends AppCompatActivity {
             setTheme(R.style.DarkTheme);
         }
         super.onCreate(savedInstanceState);
+
 
         // Display the fragment as the main content
         getFragmentManager().beginTransaction()

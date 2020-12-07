@@ -1,10 +1,12 @@
 package edu.mssucis385.clickergame;
 
+import androidx.annotation.NonNull;
+
 public class Costs {
     private static int mPointMultiplierCost = 15;
     private static int mBasePointCost = 15;
     private static int mDoubleChanceStackCost = 15;
-    private static int mTickCost = 15;
+    private static int mFingerCost = 15;
     private static int mTimerLengthCost = 15;
     private static int mTimerTickCost = 15;
 
@@ -32,12 +34,12 @@ public class Costs {
         Costs.mDoubleChanceStackCost = mDoubleChanceStackCost;
     }
 
-    public static int getTickCost() {
-        return mTickCost;
+    public static int getFingerCost() {
+        return mFingerCost;
     }
 
-    public static void setTickCost(int mTickCost) {
-        Costs.mTickCost = mTickCost;
+    public static void setFingerCost(int mTickCost) {
+        Costs.mFingerCost = mTickCost;
     }
 
     public static int getTimerLengthCost() {
@@ -55,4 +57,11 @@ public class Costs {
     public static void setTimerTickCost(int mTimerTickCost) {
         Costs.mTimerTickCost = mTimerTickCost;
     }
+
+
+    @NonNull
+    @Override
+    public String toString() {
+        return mPointMultiplierCost + "," + mBasePointCost + "," + mDoubleChanceStackCost + "," + mFingerCost + "," + mTimerLengthCost + "," + mTimerTickCost;
+}
 }

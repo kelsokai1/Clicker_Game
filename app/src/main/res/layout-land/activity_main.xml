@@ -5,68 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/backgroundAnimation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+       />
+
 
     <TextView
-        android:id="@+id/Title"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
+        android:text="Point Clicker"
         android:textSize="40sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/pointImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintLeft_toLeftOf="@id/Title"
-        app:layout_constraintTop_toBottomOf="@id/Title" />
 
     <Button
         android:id="@+id/pointsButton"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="40dp"
-        android:longClickable="true"
         android:onClick="addPoints"
         android:text="@string/add_points"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <Button
-        android:id="@+id/mainMenuButton"
-        android:layout_width="175dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
-        android:text="@string/menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
     <Button
         android:id="@+id/upgradeButton"
-        android:layout_width="175dp"
+        android:layout_width="200dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="150dp"
         android:text="@string/upgrade_title"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/mainMenuButton"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:onClick="openUpgradeMenu"/>
     <Button
-        android:id="@+id/cosmeticButton"
-        android:layout_width="175dp"
-        android:layout_height="40dp"
-        android:text="@string/cosmetic_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/upgradeButton"
-        android:onClick="openCosmeticMenu"
-        android:visibility="invisible"/>
-    <Button
         android:id="@+id/settingsButton"
-        android:layout_width="175dp"
+        android:layout_width="200dp"
         android:layout_height="40dp"
         android:text="@string/setting"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/cosmeticButton"
+        app:layout_constraintLeft_toRightOf="@id/upgradeButton"
         android:onClick="openOptionMenu"/>
 
 

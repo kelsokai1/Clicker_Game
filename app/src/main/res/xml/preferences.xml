@@ -6,6 +6,11 @@
         android:key="pref_theme"
         android:title="Dark theme"
         android:summary="Turn on dark theme" />
+    <SwitchPreference
+        android:visibility="gone"
+        android:key="music_pref"
+        android:title="Music"
+        android:summary="Turn on music"/>
 
 
 </PreferenceScreen>

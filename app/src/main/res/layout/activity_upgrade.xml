@@ -7,7 +7,7 @@
     tools:context=".UpgradeActivity">
 
     <TextView
-        android:id="@+id/cosmeticTextView"
+        android:id="@+id/upgradeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/upgrade_title"
@@ -16,140 +16,125 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/upgradeOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="45dp"
-        android:text="Upgrade"
-        android:textSize="40sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cosmeticTextView" />
-
-    <TextView
-        android:id="@+id/upgradeTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
-        android:text="Upgrade"
-        android:textSize="40sp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cosmeticTextView" />
-
     <Button
         android:id="@+id/basePointUpgradeButton"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="45dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="25dp"
         android:text="@string/base_point"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="@id/upgradeOne"
-        app:layout_constraintTop_toBottomOf="@id/upgradeOne"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upgradeTextView"
         android:onClick="basePointUpgrade"/>
+
     <TextView
+        android:id="@+id/baseCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/basePointUpgradeButton"
-        app:layout_constraintRight_toRightOf="@id/basePointUpgradeButton"
+        app:layout_constraintLeft_toLeftOf="@id/basePointUpgradeButton"
         android:textSize="15sp"
         android:text="@string/cost"/>
 
     <Button
         android:id="@+id/pointMultiplierUpgradeButton"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="25dp"
         android:text="@string/point_multiplier"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="@id/upgradeTwo"
-        app:layout_constraintTop_toBottomOf="@id/upgradeTwo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upgradeTextView"
         android:onClick="pointMultiplierUpgrade"/>
+
     <TextView
+        android:id="@+id/multiplierCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/pointMultiplierUpgradeButton"
-        app:layout_constraintRight_toRightOf="@id/pointMultiplierUpgradeButton"
+        app:layout_constraintLeft_toLeftOf="@id/pointMultiplierUpgradeButton"
         android:textSize="15sp"
         android:text="@string/cost"/>
 
     <Button
-        android:id="@+id/longPress"
+        android:id="@+id/moreFingers"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
-        android:text="Long Press"
+        android:text="More Fingers"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="@id/upgradeOne"
+        app:layout_constraintRight_toRightOf="@id/basePointUpgradeButton"
         app:layout_constraintTop_toBottomOf="@id/basePointUpgradeButton"
-        android:onClick="longPressUpgrade"
-        />
+        android:onClick="fingerUpgrade" />
+
     <TextView
+        android:id="@+id/fingerCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/longPress"
-        app:layout_constraintRight_toRightOf="@id/longPress"
+        app:layout_constraintTop_toBottomOf="@id/moreFingers"
+        app:layout_constraintLeft_toLeftOf="@id/moreFingers"
         android:textSize="15sp"
         android:text="@string/cost"/>
 
     <Button
         android:id="@+id/timerUpgradeButton"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
         android:text="@string/upgrade_timer"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="@id/upgradeTwo"
+        app:layout_constraintRight_toRightOf="@id/pointMultiplierUpgradeButton"
         app:layout_constraintTop_toBottomOf="@id/pointMultiplierUpgradeButton"
         android:onClick="timerUpgrade"/>
+
     <TextView
+        android:id="@+id/timerCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/timerUpgradeButton"
-        app:layout_constraintRight_toRightOf="@id/timerUpgradeButton"
+        app:layout_constraintLeft_toLeftOf="@id/timerUpgradeButton"
         android:textSize="15sp"
         android:text="@string/cost"/>
 
     <Button
         android:id="@+id/doublePointsReceivedButton"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
         android:text="@string/double_points_received"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="@id/upgradeOne"
-        app:layout_constraintTop_toBottomOf="@id/longPress"
+        app:layout_constraintRight_toRightOf="@id/moreFingers"
+        app:layout_constraintTop_toBottomOf="@id/moreFingers"
         android:onClick="pointDoubleUpgrade"/>
+
     <TextView
+        android:id="@+id/doubleCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/doublePointsReceivedButton"
-        app:layout_constraintRight_toRightOf="@id/doublePointsReceivedButton"
+        app:layout_constraintLeft_toLeftOf="@id/doublePointsReceivedButton"
         android:textSize="15sp"
         android:text="@string/cost"/>
 
     <Button
         android:id="@+id/efficientTimerButton"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
         android:text="@string/more_efficient_timer"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="@id/upgradeTwo"
+        app:layout_constraintRight_toRightOf="@id/timerUpgradeButton"
         app:layout_constraintTop_toBottomOf="@id/timerUpgradeButton"
         android:onClick="timerEfficiencyUpgrade"/>
+
     <TextView
+        android:id="@+id/efficiencyCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/efficientTimerButton"
-        app:layout_constraintRight_toRightOf="@id/efficientTimerButton"
+        app:layout_constraintLeft_toLeftOf="@id/efficientTimerButton"
         android:textSize="15sp"
         android:text="@string/cost"/>
 
