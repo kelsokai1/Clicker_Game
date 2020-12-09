@@ -21,6 +21,7 @@ public class UpgradeActivity extends AppCompatActivity {
     TextView mDoubleCostText;
     TextView mTimerCostText;
     TextView mTimerEfficiencyCostText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Change the theme if preference is true
@@ -43,7 +44,7 @@ public class UpgradeActivity extends AppCompatActivity {
         mFingerCostText.setText(mFingerCostText.getText().toString() + Costs.getFingerCost());
         mDoubleCostText.setText(mDoubleCostText.getText().toString() + Costs.getDoubleChanceStackCost());
         mTimerCostText.setText(mTimerCostText.getText().toString() + Costs.getTimerLengthCost());
-        mTimerEfficiencyCostText.setText(mTimerEfficiencyCostText.getText().toString()+ Costs.getTimerTickCost());
+        mTimerEfficiencyCostText.setText(mTimerEfficiencyCostText.getText().toString() + Costs.getTimerTickCost());
 
 
     }
@@ -67,8 +68,9 @@ public class UpgradeActivity extends AppCompatActivity {
         if (Points.getPoints() >= Costs.getPointMultiplierCost()) {
 
             Points.setBasePoint(Points.getBasePoint() + 1);
-            Costs.setPointMultiplierCost(Costs.getPointMultiplierCost() * 2);
             Points.removePoints(Costs.getPointMultiplierCost());
+            Costs.setPointMultiplierCost(Costs.getPointMultiplierCost() * 2);
+
         } else
             Toast.makeText(this, "Not enough points", Toast.LENGTH_SHORT).show();
 
@@ -79,12 +81,13 @@ public class UpgradeActivity extends AppCompatActivity {
 
     public void fingerUpgrade(View view) {
         if (Points.getPoints() >= Costs.getFingerCost()) {
-            if (Points.getMaxFingers() > 10 ) {
+            if (Points.getMaxFingers() > 10) {
                 Toast.makeText(this, "Max Upgrade", Toast.LENGTH_SHORT).show();
-            } else
-                Points.setMaxFingers(Points.getMaxFingers() +1);
-            Points.removePoints(Costs.getPointMultiplierCost());
-            Costs.setFingerCost(Costs.getFingerCost() * 2);
+            } else {
+                Points.setMaxFingers(Points.getMaxFingers() + 1);
+                Points.removePoints(Costs.getFingerCost());
+                Costs.setFingerCost(Costs.getFingerCost() * 2);
+            }
         } else
             Toast.makeText(this, "Not enough points", Toast.LENGTH_SHORT).show();
         mFingerCostText.setText(getText(R.string.cost).toString() + Costs.getFingerCost());
@@ -135,6 +138,7 @@ public class UpgradeActivity extends AppCompatActivity {
         mTimerEfficiencyCostText.setText(getText(R.string.cost).toString() + Costs.getTimerTickCost());
         updateMenuTitle();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         this.menu = menu;
@@ -155,8 +159,9 @@ public class UpgradeActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    public void updateMenuTitle(){
+
+    public void updateMenuTitle() {
         MenuItem mPointMenuItem = menu.findItem(R.id.points);
-        mPointMenuItem.setTitle(getText(R.string.points).toString() + (int)Points.getPoints());
+        mPointMenuItem.setTitle(getText(R.string.points).toString() + (int) Points.getPoints());
     }
 }
